@@ -70,17 +70,17 @@ l3leaf:
       bgp_as: 65101
       nodes:
         # Definition of hostnames under the node_group
-        - name: dc1-leaf1a
+        - name: leaf-01
           id: 1
-          mgmt_ip: 172.16.1.101/24
+          mgmt_ip: 192.168.0.21/24
           # Definition of the port to be used in the uplink device facing this device.
           # Note that the number of elements in this list must match the length of 'uplink_switches' as well as 'uplink_interfaces'
           uplink_switch_interfaces:
             - Ethernet1
             - Ethernet1
-        - name: dc1-leaf1b
+        - name: leaf-02
           id: 2
-          mgmt_ip: 172.16.1.102/24
+          mgmt_ip: 192.168.0.22/24
           uplink_switch_interfaces:
             - Ethernet2
             - Ethernet2
@@ -88,18 +88,34 @@ l3leaf:
     - group: DC1_L3_LEAF2
       bgp_as: 65102
       nodes:
-        - name: dc1-leaf2a
+        - name: leaf-03
           id: 3
-          mgmt_ip: 172.16.1.103/24
+          mgmt_ip: 192.168.0.23/24
           uplink_switch_interfaces:
             - Ethernet3
             - Ethernet3
-        - name: dc1-leaf2b
+        - name: leaf-04
           id: 4
-          mgmt_ip: 172.16.1.104/24
+          mgmt_ip: 192.168.0.24/24
           uplink_switch_interfaces:
             - Ethernet4
             - Ethernet4
+            
+    - group: DC1_L3_LEAF3
+      bgp_as: 65102
+      nodes:
+        - name: leaf-05
+          id: 3
+          mgmt_ip: 192.168.0.25/24
+          uplink_switch_interfaces:
+            - Ethernet5
+            - Ethernet5
+        - name: leaf-06
+          id: 4
+          mgmt_ip: 192.168.0.26/24
+          uplink_switch_interfaces:
+            - Ethernet6
+            - Ethernet6
 
 
 # L2 Leaf switch group
@@ -110,7 +126,7 @@ l2leaf:
 
   node_groups:
     - group: DC1_L2_LEAF1
-      uplink_switches: ['dc1-leaf1a', 'dc1-leaf1b']
+      uplink_switches: ['leaf-01', 'leaf-02']
       nodes:
         - name: dc1-leaf1c
           id: 1
@@ -120,7 +136,7 @@ l2leaf:
             - Ethernet8
 
     - group: DC1_L2_LEAF2
-      uplink_switches: ['dc1-leaf2a', 'dc1-leaf2b']
+      uplink_switches: ['leaf-03', 'leaf-04']
       nodes:
         - name: dc1-leaf2c
           id: 2
