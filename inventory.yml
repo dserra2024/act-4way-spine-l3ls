@@ -31,18 +31,20 @@ all:
               hosts:
                 leaf-01:
                   ansible_host: 10.18.187.234
-                dc1-leaf1b:
-                  ansible_host: 172.16.1.102
-                dc1-leaf2a:
-                  ansible_host: 172.16.1.103
-                dc1-leaf2b:
-                  ansible_host: 172.16.1.104
-            DC1_L2_LEAVES:
-              hosts:
-                dc1-leaf1c:
-                  ansible_host: 172.16.1.151
-                dc1-leaf2c:
-                  ansible_host: 172.16.1.152
+                leaf-02:
+                  ansible_host: 10.18.187.232
+                leaf-03:
+                  ansible_host: 10.18.187.236
+                leaf-04:
+                  ansible_host: 10.18.187.244
+                leaf-05:
+                  ansible_host: 10.18.187.242
+                leaf-06:
+                  ansible_host: 10.18.187.239
+             DC1_L2_LEAVES:
+               hosts:
+                 leaf1c:
+                 leaf2c:
 
     NETWORK_SERVICES:
       children:
