@@ -26,12 +26,12 @@ servers:
           # Port channel mode for LACP.
           mode: active
 
-      - endpoint_ports: [ iLO ]
-        switch_ports: [ Ethernet5 ]
-        switches: [ dc1-leaf1c ]
-        vlans: 11
-        mode: access
-        spanning_tree_portfast: edge
+#      - endpoint_ports: [ iLO ]
+#        switch_ports: [ Ethernet5 ]
+#        switches: [ dc1-leaf1c ]
+#        vlans: 11
+#        mode: access
+#        spanning_tree_portfast: edge
 
   - name: dc1-leaf2-server1
     adapters:
@@ -46,9 +46,9 @@ servers:
           description: PortChannel dc1-leaf2-server1
           mode: active
 
-      - endpoint_ports: [ iLO ]
-        switch_ports: [ Ethernet5 ]
-        switches: [ dc1-leaf2c ]
-        vlans: 11
-        mode: access
-        spanning_tree_portfast: edge
+#      - endpoint_ports: [ iLO ]
+#        switch_ports: [ Ethernet5 ]
+#        switches: [ dc1-leaf2c ]
+#        vlans: 11
+#       mode: access
+#        spanning_tree_portfast: edge

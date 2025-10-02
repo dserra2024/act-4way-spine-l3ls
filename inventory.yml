@@ -42,9 +42,9 @@ all:
                 leaf-06:
                   ansible_host: 10.18.187.239
             DC1_L2_LEAVES:
-              hosts:
-                leaf1c:
-                leaf2c:
+#              hosts:
+#                leaf1c:
+#                leaf2c:
 
     NETWORK_SERVICES:
       children:
