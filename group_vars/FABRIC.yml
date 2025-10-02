@@ -86,3 +86,18 @@ ntp_settings:
   server_vrf: use_mgmt_interface_vrf
   servers:
     - name: 0.pool.ntp.org
+
+management_eapi:
+  # Enable/Disable api http-commands.
+  enabled: true
+  enable_http: true
+  enable_https: true
+  default_services: true
+
+  vrfs: 
+    - name: default
+      # Enable/disable Management eAPI for this VRF.
+      enabled: true
+    - name: MGMT
+      # Enable/disable Management eAPI for this VRF.
+      enabled: true
