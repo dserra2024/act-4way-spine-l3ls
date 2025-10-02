@@ -28,11 +28,11 @@ spine:
       mgmt_ip: 192.168.0.11/24
 
     - name: spine-03
-      id: 2
+      id: 3
       mgmt_ip: 192.168.0.12/24
 
     - name: spine-04
-      id: 2
+      id: 4
       mgmt_ip: 192.168.0.13/24
 
 # L3 Leaf switch group
